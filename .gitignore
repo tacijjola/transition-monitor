@@ -1,0 +1,30 @@
+# Raw third-party data — download from source, see data/README.md
+owid-energy-data*.csv
+*.pbix
+
+# Enterprise Architect working files
+*.eap
+*.feap
+*.qea-shm
+*.qea-wal
+*.ldb
+
+# Large intermediate exports
+*.bmp
+
+# OS / editor
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+~$*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/

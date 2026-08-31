@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="770" viewBox="0 0 1160 770" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .cls { fill: #ffffff; stroke: #333333; stroke-width: 1.2; }
+      .title { font-size: 14px; font-weight: bold; text-anchor: middle; fill: #222; }
+      .attr { font-size: 12px; fill: #333; }
+      .sep { stroke: #333333; stroke-width: 1; }
+      .assoc { stroke: #555577; stroke-width: 1.2; fill: none; }
+      .mult { font-size: 12px; fill: #222; }
+      .role { font-size: 11px; fill: #777; }
+      .note { fill: #ffffff; stroke: #4a7ba6; stroke-width: 1.1; }
+      .notetext { font-size: 12px; fill: #1f3d5c; }
+      .notelink { stroke: #4a7ba6; stroke-width: 1; stroke-dasharray: 4 3; fill: none; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1160" height="770" fill="#ffffff"/>
+
+  <!-- Associations (drawn first, under boxes) -->
+  <line class="assoc" x1="235" y1="178" x2="480" y2="255"/>
+  <line class="assoc" x1="885" y1="198" x2="660" y2="255"/>
+  <line class="assoc" x1="225" y1="560" x2="480" y2="470"/>
+  <line class="assoc" x1="900" y1="545" x2="660" y2="470"/>
+
+  <text class="mult" x="262" y="196">1</text>
+  <text class="role" x="196" y="196">+FK_date_id</text>
+  <text class="mult" x="440" y="243">0..*</text>
+
+  <text class="mult" x="856" y="216">1</text>
+  <text class="role" x="874" y="216">+FK_country_id</text>
+  <text class="mult" x="676" y="243">0..*</text>
+
+  <text class="mult" x="256" y="552">1</text>
+  <text class="role" x="180" y="552">+FK_version_id</text>
+  <text class="mult" x="438" y="486">0..*</text>
+
+  <text class="mult" x="874" y="536">1</text>
+  <text class="role" x="890" y="536">+FK_indicator_id</text>
+  <text class="mult" x="676" y="486">0..*</text>
+
+  <!-- DimDate -->
+  <rect class="cls" x="120" y="40" width="230" height="138"/>
+  <text class="title" x="235" y="59">DimDate</text>
+  <line class="sep" x1="120" y1="68" x2="350" y2="68"/>
+  <text class="attr" x="132" y="86">-  full_date: Date</text>
+  <text class="attr" x="132" y="106">-  month: Integer</text>
+  <text class="attr" x="132" y="126">-  PK_date_id: Integer</text>
+  <text class="attr" x="132" y="146">-  quarter: Integer</text>
+  <text class="attr" x="132" y="166">-  year: Integer</text>
+
+  <!-- DimCountry -->
+  <rect class="cls" x="760" y="40" width="250" height="158"/>
+  <text class="title" x="885" y="59">DimCountry</text>
+  <line class="sep" x1="760" y1="68" x2="1010" y2="68"/>
+  <text class="attr" x="772" y="86">-  country_name: String</text>
+  <text class="attr" x="772" y="106">-  income_group: String</text>
+  <text class="attr" x="772" y="126">-  iso_code: String</text>
+  <text class="attr" x="772" y="146">-  micro_state_flag: Boolean</text>
+  <text class="attr" x="772" y="166">-  PK_country_id: Integer</text>
+  <text class="attr" x="772" y="186">-  region: String</text>
+
+  <!-- FactCountryScore -->
+  <rect class="cls" x="440" y="250" width="260" height="220"/>
+  <text class="title" x="570" y="269">FactCountryScore</text>
+  <line class="sep" x1="440" y1="278" x2="700" y2="278"/>
+  <text class="attr" x="452" y="296">-  excluded_from_ranking_flag: Boolean</text>
+  <text class="attr" x="452" y="316">-  FK_country_id: Integer</text>
+  <text class="attr" x="452" y="336">-  FK_date_id: Integer</text>
+  <text class="attr" x="452" y="356">-  FK_indicator_id: Integer</text>
+  <text class="attr" x="452" y="376">-  FK_version_id: Integer</text>
+  <text class="attr" x="452" y="396">-  insufficient_data_flag: Boolean</text>
+  <text class="attr" x="452" y="416">-  PK_score_id: Integer</text>
+  <text class="attr" x="452" y="436">-  raw_value: Real</text>
+  <text class="attr" x="452" y="456">-  score_value: Real</text>
+
+  <!-- DimScorecardVersion -->
+  <rect class="cls" x="100" y="560" width="250" height="118"/>
+  <text class="title" x="225" y="579">DimScorecardVersion</text>
+  <line class="sep" x1="100" y1="588" x2="350" y2="588"/>
+  <text class="attr" x="112" y="606">-  PK_version_id: Integer</text>
+  <text class="attr" x="112" y="626">-  published_datetime: Date</text>
+  <text class="attr" x="112" y="646">-  status: String</text>
+  <text class="attr" x="112" y="666">-  version_number: Integer</text>
+
+  <!-- DimIndicator -->
+  <rect class="cls" x="780" y="540" width="240" height="178"/>
+  <text class="title" x="900" y="559">DimIndicator</text>
+  <line class="sep" x1="780" y1="568" x2="1020" y2="568"/>
+  <text class="attr" x="792" y="586">-  direction: String</text>
+  <text class="attr" x="792" y="606">-  indicator_name: String</text>
+  <text class="attr" x="792" y="626">-  PK_indicator_id: Integer</text>
+  <text class="attr" x="792" y="646">-  scoring_method: String</text>
+  <text class="attr" x="792" y="666">-  source: String</text>
+  <text class="attr" x="792" y="686">-  unit: String</text>
+  <text class="attr" x="792" y="706">-  weight: Real</text>
+
+  <!-- Note: grain statement -->
+  <path class="note" d="M 740 300 L 908 300 L 920 312 L 920 372 L 740 372 Z"/>
+  <path class="note" d="M 908 300 L 908 312 L 920 312" fill="none"/>
+  <text class="notetext" x="752" y="326">One row per country ×</text>
+  <text class="notetext" x="752" y="344">indicator × date × version</text>
+  <line class="notelink" x1="740" y1="336" x2="700" y2="340"/>
+
+  <!-- Note: audit trail -->
+  <path class="note" d="M 400 600 L 578 600 L 590 612 L 590 682 L 400 682 Z"/>
+  <path class="note" d="M 578 600 L 578 612 L 590 612" fill="none"/>
+  <text class="notetext" x="412" y="626">Supports audit trail +</text>
+  <text class="notetext" x="412" y="644">approval workflow from</text>
+  <text class="notetext" x="412" y="662">TO-BE process</text>
+  <line class="notelink" x1="400" y1="640" x2="350" y2="632"/>
+
+  <!-- Diagram caption -->
+  <text x="580" y="750" text-anchor="middle" font-size="12" fill="#888">Transition Monitor — Star Schema (UML Class Diagram)</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="700" viewBox="0 0 1060 700" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <style>
+      .frame { fill: #ffffff; stroke: #444; stroke-width: 2; }
+      .box { fill: #f2f2f2; stroke: #999; stroke-width: 1.2; }
+      .boxdark { fill: #e4e4e4; stroke: #999; stroke-width: 1.2; }
+      .label { font-size: 13px; fill: #333; }
+      .small { font-size: 11px; fill: #666; }
+      .h1 { font-size: 17px; font-weight: bold; fill: #222; }
+      .h2 { font-size: 13px; font-weight: bold; fill: #333; }
+      .badge { fill: #ddd; stroke: #888; stroke-width: 1; }
+      .btnprimary { fill: #d9d9d9; stroke: #555; stroke-width: 1.6; }
+      .btnsecondary { fill: #efefef; stroke: #888; stroke-width: 1.2; }
+      .callout { fill: #eef4fb; stroke: #4a7ba6; stroke-width: 1; }
+      .callouttext { font-size: 11px; fill: #1f3d5c; }
+      .calloutline { stroke: #4a7ba6; stroke-width: 1; stroke-dasharray: 4 3; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1060" height="700" fill="#fafafa"/>
+  <text x="30" y="30" class="h1">Wireframe 2 — Review &amp; Approval Screen (Reviewer)</text>
+  <text x="30" y="48" class="small">Low-fidelity · Transition Monitor · mirrors the "Approved?" gateway from the TO-BE BPMN</text>
+
+  <!-- App frame -->
+  <rect class="frame" x="30" y="65" width="760" height="600"/>
+
+  <!-- Top bar -->
+  <rect class="boxdark" x="30" y="65" width="760" height="48"/>
+  <text x="50" y="94" class="h2">Transition Monitor</text>
+  <rect class="box" x="600" y="76" width="90" height="26"/>
+  <text x="612" y="93" class="small">Reviewer ▾</text>
+  <rect class="box" x="700" y="76" width="72" height="26"/>
+  <text x="714" y="93" class="small">Help</text>
+
+  <!-- Review header -->
+  <text x="50" y="140" class="h2">Scorecard awaiting review</text>
+  <rect class="badge" x="235" y="122" width="110" height="26" rx="13"/>
+  <text x="252" y="139" class="small">DRAFT v3.0</text>
+  <rect class="box" x="50" y="152" width="720" height="26"/>
+  <text x="62" y="169" class="small">Submitted by: Analyst · 2026-08-27 09:14 · OWID release 2026-08 · scoring method: TTI v2 (standardized)</text>
+
+  <!-- Summary panel -->
+  <rect class="box" x="50" y="192" width="440" height="240"/>
+  <text x="66" y="214" class="h2">Scorecard summary</text>
+  <rect class="boxdark" x="66" y="226" width="408" height="24"/>
+  <text x="76" y="242" class="small">Countries scored: 182 · excluded: 14 · insufficient data: 9</text>
+  <rect class="box" x="66" y="258" width="408" height="30"/>
+  <text x="76" y="277" class="small">Top mover: Country B (+9) · Largest decline: Country F (−7)</text>
+  <rect class="box" x="66" y="296" width="196" height="120"/>
+  <text x="90" y="356" class="small">[ score distribution ]</text>
+  <rect class="box" x="278" y="296" width="196" height="120"/>
+  <text x="300" y="356" class="small">[ changes vs. v2.4 ]</text>
+
+  <!-- Comments panel -->
+  <rect class="box" x="510" y="192" width="260" height="240"/>
+  <text x="526" y="214" class="h2">Comments</text>
+  <rect class="boxdark" x="526" y="226" width="228" height="54"/>
+  <text x="536" y="244" class="small">Analyst: "Country C flagged —</text>
+  <text x="536" y="259" class="small">source gap in 2024 series."</text>
+  <rect class="boxdark" x="526" y="288" width="228" height="54"/>
+  <text x="536" y="306" class="small">Reviewer: "Check Country F drop</text>
+  <text x="536" y="321" class="small">before publish?"</text>
+  <rect class="box" x="526" y="382" width="228" height="34"/>
+  <text x="536" y="404" class="small">＋ Add comment…</text>
+
+  <!-- Decision area -->
+  <rect class="boxdark" x="50" y="456" width="720" height="90"/>
+  <text x="66" y="480" class="h2">Decision</text>
+  <rect class="btnprimary" x="66" y="494" width="180" height="38"/>
+  <text x="112" y="518" class="label">✓  Approve</text>
+  <rect class="btnsecondary" x="266" y="494" width="200" height="38"/>
+  <text x="292" y="518" class="label">↩  Request changes</text>
+  <text x="486" y="518" class="small">Approval publishes automatically + stores version</text>
+
+  <!-- Audit strip -->
+  <rect class="box" x="50" y="562" width="720" height="26"/>
+  <text x="62" y="579" class="small">Audit trail: v3.0 draft generated 2026-08-27 07:00 (auto) · submitted 09:14 · review opened 09:32 · …</text>
+
+  <!-- Callouts -->
+  <rect class="callout" x="820" y="150" width="215" height="58" rx="3"/>
+  <text x="830" y="168" class="callouttext">FR-33/34: In-system review replaces</text>
+  <text x="830" y="183" class="callouttext">email ping-pong (AS-IS pain).</text>
+  <line class="calloutline" x1="820" y1="176" x2="770" y2="310"/>
+
+  <rect class="callout" x="820" y="460" width="215" height="86" rx="3"/>
+  <text x="830" y="478" class="callouttext">FR-34/36/37: Approve / Request</text>
+  <text x="830" y="493" class="callouttext">changes = "Approved?" gateway</text>
+  <text x="830" y="508" class="callouttext">in TO-BE BPMN. Approval triggers</text>
+  <text x="830" y="523" class="callouttext">automated publish + versioning.</text>
+  <line class="calloutline" x1="820" y1="500" x2="770" y2="512"/>
+
+  <rect class="callout" x="820" y="562" width="215" height="58" rx="3"/>
+  <text x="830" y="580" class="callouttext">FR-41: Full audit trail — every step</text>
+  <text x="830" y="595" class="callouttext">timestamped (DimScorecardVersion).</text>
+  <line class="calloutline" x1="820" y1="588" x2="770" y2="575"/>
+</svg>
